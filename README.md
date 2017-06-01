@@ -77,4 +77,54 @@ To stop Flink, there is also a stop-cluster.sh script.
 bin/start-cluster.sh
 bin/stop-cluster.sh
 ```
+Stream Processing/ What is stream processing?
+------------------
 
+Batch Processing
+------------------
+
+Case for Streaming Data Processing
+------------------
+
+What is Apache Flink?
+------------------
+
+What are Flink’s components?
+------------------
+
+Flink DataStream API (for Stream Processing)
+------------------
+
+Comparison between Spark and Flink
+------------------
+
+* **1. Data processing**
+
+Spark processes data in batch mode while Flink processes streaming data in real time. Spark processes chunks of data, known as RDDs while Flink can process rows after rows of data in real time. So, while a minimum data latency is always there with Spark, it is not so with Flink.
+
+* **2. Iterations**
+
+Spark supports data iterations in batches but Flink can natively iterate its data by using its streaming architecture.
+
+* **3. Memory Management**
+
+Flink can automatically adapt to varied datasets but Spark needs to optimize and adjust its jobs manually to individual datasets. Also Spark does manual partitioning and caching. So, expect some delay in processing.
+
+* **4. Data Flow**
+
+Flink is able to provide intermediate results on its data processing whenever required. While Spark follows a procedural programming system, Flink follows a distributed data flow approach. So, whenever intermediate results are required, broadcast variables are used to distribute the pre-calculated results through to all the worker nodes.
+
+* **5. Data Visualization**
+
+Flink provides a web interface to submit and execute all jobs. Both Spark and Flink are integrated with Apache Zeppelin and provide data ingestion, data analytics, discovery, collaboration and visualization. Apache Zeppelin also provides a multi-language backend that allows you to submit and execute Flink programs.
+
+* **6. Processing Time**
+
+The paragraphs below provide a comparison between the time taken by Flink and Spark in different jobs.
+To make a fair comparison, both Flink and Spark were given the same resources in the form of machine specifications and node configurations.
+
+Batch-based or Streaming Data — which process is better?
+------------------
+
+Summary
+------------------
